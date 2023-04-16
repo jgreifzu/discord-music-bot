@@ -94,6 +94,7 @@ async def on_voice_state_update(member, before, after):
         return
 
     if len(voice_state.channel.members) == 1:
+        print("leaving due to inactivity")
         await voice_state.disconnect()
 
 
