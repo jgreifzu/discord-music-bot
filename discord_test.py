@@ -98,6 +98,9 @@ async def on_voice_state_update(member, before, after):
         await voice_state.disconnect()
 
 
+discord_token = os.environ.get('token')
 
-
-bot.run(private.discord_key)
+if discord_token == None:
+    print("specify a token with 'docker run -e token='insert token here' jgreifzu/music-bot:v1.3'")
+else:
+    bot.run(discord_token)
