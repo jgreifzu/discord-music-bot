@@ -10,6 +10,7 @@ from youtube_download import download_song
 import time # To reproduce the error
 import typing # For typehinting
 import functools
+import private
 
 import asyncio
 import nacl
@@ -98,4 +99,4 @@ async def on_voice_state_update(member, before, after):
 
 
 
-bot.run('MTA5NTUzNzk3NDA4NDY1MzEyNg.GCVY74.hBMyzUsg6BEUh_D7YT2MEjDUKUPzOScV7Q2dUM')
+bot.run(private.discord_key)
